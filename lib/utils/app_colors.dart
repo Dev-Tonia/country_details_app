@@ -7,7 +7,7 @@ class AppColor {
   static Color buttonColor = const Color(0xffFF6C00);
   static Color greyWarm25 = const Color(0xffFDFDFC);
   static Color darkModeScreenColor = const Color(0xff000F24);
-  static Color darkModeSearchBar = const Color(0xff98A2B3);
+  static Color darkModeSearchBar = const Color(0xff1E2C41);
   static Color? greyWarm200 = Colors.grey[200];
   static Color greyWarm400 = const Color(0xff98A2B3);
   static Color dropdownColor = const Color(0xffA9B8D4);

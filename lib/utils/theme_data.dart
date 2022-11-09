@@ -103,14 +103,16 @@ class AppTheme {
   static ThemeData lightThemeData() {
     return ThemeData(
       textTheme: AppTheme.lightTextTheme,
+      focusColor: AppColor.greyWarm100,
       fontFamily: 'Axiforma',
       brightness: Brightness.light,
       scaffoldBackgroundColor: Colors.white,
+      iconTheme: IconThemeData(color: AppColor.greyWarm500),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: AppColor.dropdownColor,
           padding: const EdgeInsets.only(
-            left: 16,
+            left: 9,
             right: 11,
             top: 10,
             bottom: 10,
@@ -122,22 +124,26 @@ class AppTheme {
         backgroundColor: Colors.white,
         elevation: 0,
         iconTheme: IconThemeData(color: AppColor.greyWarm),
-        centerTitle: true,
+      ),
+      colorScheme: ColorScheme.light(
+        secondary: AppColor.greyWarm25,
       ),
     );
   }
 
   static ThemeData darkThemeData() {
     return ThemeData(
+      focusColor: AppColor.darkModeSearchBar,
       fontFamily: 'Axiforma',
       textTheme: AppTheme.darkTextTheme,
       brightness: Brightness.dark,
+      iconTheme: IconThemeData(color: AppColor.greyWarm),
       scaffoldBackgroundColor: AppColor.darkModeScreenColor,
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: AppColor.dropdownColor,
           padding: const EdgeInsets.only(
-            left: 16,
+            left: 9,
             right: 11,
             top: 10,
             bottom: 10,
@@ -148,7 +154,9 @@ class AppTheme {
         backgroundColor: AppColor.darkModeScreenColor,
         elevation: 0,
         iconTheme: IconThemeData(color: AppColor.greyWarm100),
-        centerTitle: true,
+      ),
+      colorScheme: ColorScheme.light(
+        secondary: AppColor.darkModeSearchBar,
       ),
     );
   }
