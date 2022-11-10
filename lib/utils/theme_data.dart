@@ -156,8 +156,7 @@ class AppTheme {
         iconTheme: IconThemeData(color: AppColor.greyWarm100),
       ),
       colorScheme: ColorScheme.light(
-        secondary: AppColor.darkModeSearchBar,
-      ),
+          secondary: AppColor.darkModeSearchBar, brightness: Brightness.dark),
     );
   }
 }
