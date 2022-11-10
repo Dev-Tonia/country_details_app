@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Country Details',
       theme: AppTheme.darkThemeData(),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
