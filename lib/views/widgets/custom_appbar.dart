@@ -5,7 +5,7 @@ import '../../utils/app_colors.dart';
 class CustomAppbar {
   static PreferredSize customAppBar(TextTheme textTheme, ThemeData theme) {
     return PreferredSize(
-      preferredSize: const Size.fromHeight(200),
+      preferredSize: const Size.fromHeight(190),
       child: Padding(
         padding: const EdgeInsets.only(
           left: 24.0,
@@ -21,7 +21,8 @@ class CustomAppbar {
                   style: textTheme.caption!.copyWith(
                       // using this copy function, you can modify your text style from your theme class
                       fontWeight: FontWeight.bold,
-                      fontSize: 30,
+                      fontFamily: 'Pacifico',
+                      fontSize: 25,
                       color: const Color(0xff001637)),
                   children: <TextSpan>[
                     TextSpan(

@@ -1,9 +1,10 @@
 import 'package:country_details/utils/theme_data.dart';
 import 'package:country_details/views/screens/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Country Details',
-      theme: AppTheme.darkThemeData(),
+      theme: AppTheme.lightThemeData(),
       home: HomePage(),
     );
   }

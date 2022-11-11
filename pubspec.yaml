@@ -15,6 +15,8 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   http: ^0.13.5
+  riverpod: ^2.1.1
+  flutter_riverpod: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -33,5 +35,8 @@ flutter:
     - family: Axiforma
       fonts:
         - asset: fonts/Axiforma-Regular.ttf
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
         
   
