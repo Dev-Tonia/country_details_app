@@ -3,6 +3,8 @@ import 'package:country_details/views/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'views/screens/detailed_page.dart';
+
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Country Details',
       theme: AppTheme.lightThemeData(),
-      home: HomePage(),
+      home: const DetailedPage(),
     );
   }
 }

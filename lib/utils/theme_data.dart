@@ -121,7 +121,7 @@ class AppTheme {
         ),
       ),
       appBarTheme: AppBarTheme(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white.withOpacity(0.5),
         elevation: 0,
         iconTheme: IconThemeData(color: AppColor.greyWarm),
       ),
