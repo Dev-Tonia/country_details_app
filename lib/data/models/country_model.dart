@@ -23,6 +23,7 @@ class CountryModel {
   String? flag;
   Maps? maps;
   int? population;
+  Gini? gini;
   String? fifa;
   Car? car;
   List<String>? timezones;
@@ -58,6 +59,7 @@ class CountryModel {
       this.flag,
       this.maps,
       this.population,
+      this.gini,
       this.fifa,
       this.car,
       this.timezones,
@@ -107,6 +109,7 @@ class CountryModel {
     flag = json['flag'];
     maps = json['maps'] != null ? new Maps.fromJson(json['maps']) : null;
     population = json['population'];
+    gini = json['gini'] != null ? new Gini.fromJson(json['gini']) : null;
     fifa = json['fifa'];
     car = json['car'] != null ? new Car.fromJson(json['car']) : null;
     timezones = json['timezones'].cast<String>();
@@ -523,6 +526,22 @@ class Demonyms {
 //     return data;
 //   }
 // }
+
+class Gini {
+  double? d2014;
+
+  Gini({this.d2014});
+
+  Gini.fromJson(Map<String, dynamic> json) {
+    d2014 = json['2014'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['2014'] = this.d2014;
+    return data;
+  }
+}
 
 class Maps {
   String? googleMaps;

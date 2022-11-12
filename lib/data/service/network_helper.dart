@@ -1,8 +1,5 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
-import 'package:riverpod/riverpod.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/country_model.dart';
 

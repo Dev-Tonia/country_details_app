@@ -1,11 +1,26 @@
+import 'package:country_details/views/widgets/fliter_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../utils/app_colors.dart';
+import 'lang_model_sheet.dart';
 
-class CustomAppbar {
-  static PreferredSize customAppBar(TextTheme textTheme, ThemeData theme) {
+class CustomBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomBar({
+    Key? key,
+    required this.textTheme,
+    required this.theme,
+  }) : super(key: key);
+
+  final TextTheme textTheme;
+  final ThemeData theme;
+  @override
+  Size get preferredSize => const Size.fromHeight(190);
+
+  @override
+  Widget build(BuildContext context) {
     return PreferredSize(
-      preferredSize: const Size.fromHeight(190),
+      preferredSize: preferredSize,
       child: Padding(
         padding: const EdgeInsets.only(
           left: 24.0,
@@ -69,35 +84,39 @@ class CustomAppbar {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    dropdown.langCustomModalSheet(context);
+                  },
                   child: Row(
                     children: [
                       const Icon(
                         Icons.language,
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       Text(
                         'EN',
-                        style: textTheme.bodyText1!.copyWith(fontSize: 12),
+                        style: textTheme.bodyText1!.copyWith(fontSize: 12.sp),
                       )
                     ],
                   ),
                 ),
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    filterDropdown.flitercustomModalSheet(context);
+                  },
                   child: Row(
                     children: [
                       const Icon(
                         Icons.filter_alt_outlined,
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       Text(
                         'Filter',
-                        style: textTheme.bodyText1!.copyWith(fontSize: 12),
+                        style: textTheme.bodyText1!.copyWith(fontSize: 12.sp),
                       )
                     ],
                   ),
