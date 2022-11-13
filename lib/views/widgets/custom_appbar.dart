@@ -1,3 +1,4 @@
+import 'package:country_details/utils/theme_data.dart';
 import 'package:country_details/views/widgets/fliter_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,27 +31,8 @@ class CustomBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             AppBar(
               toolbarHeight: 71,
-              title: RichText(
-                text: TextSpan(
-                  text: 'Explore',
-                  style: textTheme.caption!.copyWith(
-                      // using this copy function, you can modify your text style from your theme class
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Pacifico',
-                      fontSize: 25,
-                      color: const Color(0xff001637)),
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: '.',
-                      style: textTheme.caption!.copyWith(
-                        // using this copy function, you can modify your text style from your theme class
-                        fontWeight: FontWeight.w900,
-                        color: AppColor.buttonColor,
-                        fontSize: 30,
-                      ),
-                    )
-                  ],
-                ),
+              title: Image(
+                image: Theme.of(context).imageForName('explore.jpg'),
               ),
               actions: [
                 Container(

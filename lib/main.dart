@@ -8,11 +8,11 @@ void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     //Set the fit size (Find your UI design, look at the dimensions of the device screen and fill it in,unit in dp)
     return ScreenUtilInit(
       designSize: const Size(360, 690),
@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Country Details',
           // You can use the library anywhere in the app even in theme
-          theme: AppTheme.lightThemeData(),
+          theme: ref.watch(theme),
+          darkTheme: ref.watch(darkTheme),
 
           home: child,
         );
