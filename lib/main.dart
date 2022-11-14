@@ -22,10 +22,8 @@ class MyApp extends ConsumerWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Country Details',
-          // You can use the library anywhere in the app even in theme
           theme: ref.watch(theme),
           darkTheme: ref.watch(darkTheme),
-
           home: child,
         );
       },

@@ -1,10 +1,8 @@
 import 'package:country_details/views/screens/detailed_page.dart';
 import 'package:country_details/views/widgets/custom_appbar.dart';
-import 'package:country_details/views/widgets/lang_model_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/models/country_model.dart';
-import '../../utils/app_colors.dart';
 import '../view_model/data_provider.dart';
 
 class HomePage extends ConsumerWidget {
@@ -24,6 +22,12 @@ class HomePage extends ConsumerWidget {
         body: _data.when(
             data: (_data) {
               countries = _data.map((e) => e).toList();
+              countries.sort(
+                (a, b) => a.name!.common.toString().compareTo(
+                      b.name!.common.toString(),
+                    ),
+              );
+
               return ListView.builder(
                 itemCount: countries.length,
                 shrinkWrap: true,

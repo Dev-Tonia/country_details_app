@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:country_details/data/models/country_model.dart';
 import 'package:flutter/material.dart';
 
@@ -27,21 +28,64 @@ class DetailedPage extends StatelessWidget {
             style: textTheme.bodyText1,
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
-          child: Column(
-            children: [
-              Container(
-                height: 200,
-                width: double.infinity,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(8.0)),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.network(detailData.flags!.png.toString()),
-                ),
+        body: Column(
+          children: [
+            CarouselSlider(
+              options: CarouselOptions(
+                viewportFraction: 1,
+                height: 200.0,
+                initialPage: 0,
+                enableInfiniteScroll: true,
+                reverse: false,
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enlargeCenterPage: true,
+                scrollDirection: Axis.horizontal,
               ),
-              Expanded(
+              items: [
+                detailData.flags!.png.toString(),
+                detailData.coatOfArms!.png.toString(),
+                detailData.maps!.googleMaps.toString()
+              ].map((i) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0)),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.network(
+                          i,
+                        ),
+                      ),
+                    );
+                  },
+                );
+              }).toList(),
+            ),
+            // Container(
+            //     width: MediaQuery.of(context).size.width,
+            //     margin: EdgeInsets.symmetric(horizontal: 5.0),
+            //     decoration: BoxDecoration(color: Colors.amber),
+            //     child: Text(
+            //       'text $i',
+            //       style: TextStyle(fontSize: 16.0),
+            //     )),
+            // Container(
+            //   height: 200,
+            //   width: double.infinity,
+            //   decoration:
+            //       BoxDecoration(borderRadius: BorderRadius.circular(8.0)),
+            //   child: ClipRRect(
+            //     borderRadius: BorderRadius.circular(8.0),
+            //     child: Image.network(
+            //       detailData.flags!.png.toString(),
+            //     ),
+            //   ),
+            // ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: ListView(
                   children: [
                     DetailCard(
@@ -153,8 +197,8 @@ class DetailedPage extends StatelessWidget {
                   ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

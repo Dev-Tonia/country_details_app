@@ -1,4 +1,5 @@
 import 'package:country_details/utils/theme_data.dart';
+import 'package:country_details/views/view_model/data_provider.dart';
 import 'package:country_details/views/widgets/fliter_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -31,8 +32,12 @@ class CustomBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             AppBar(
               toolbarHeight: 71,
-              title: Image(
-                image: Theme.of(context).imageForName('explore.jpg'),
+              title: SizedBox(
+                height: 100,
+                width: 100,
+                child: Image(
+                  image: Theme.of(context).imageForName('explore.jpg'),
+                ),
               ),
               actions: [
                 Container(
@@ -48,6 +53,7 @@ class CustomBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             TextFormField(
               textAlign: TextAlign.center,
+              controller: searchValue,
               decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.search),
                 hintText: 'Search Country',

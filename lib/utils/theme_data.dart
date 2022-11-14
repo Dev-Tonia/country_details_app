@@ -6,6 +6,7 @@ import 'package:riverpod/riverpod.dart';
 // THEME PROVIDERS
 final theme = Provider((ref) => lightThemeData);
 final darkTheme = Provider((ref) => darkThemeData);
+final themeMode = StateProvider((ref) => ThemeMode.light);
 // this is for light mode..
 TextTheme lightTextTheme = TextTheme(
   //  for country name in the detailed screen and some text that uses the same text color
@@ -167,8 +168,7 @@ ThemeData darkThemeData = ThemeData(
 
 extension CustomTheme on ThemeData {
   AssetImage imageForName(String name) {
-    final path =
-        brightness == Brightness.dark ? 'images/dark_images' : 'images/';
+    final path = brightness == Brightness.dark ? 'images/dark_image' : 'images';
     return AssetImage('$path/$name');
   }
 }

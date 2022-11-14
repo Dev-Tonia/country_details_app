@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:riverpod/riverpod.dart';
 import '../../data/models/country_model.dart';
 import '../../data/service/network_helper.dart';
@@ -12,3 +13,5 @@ final modelSheetProvider =
 final countryDataProvider = FutureProvider<List<CountryModel>>((ref) async {
   return ref.watch(countryProvider).serviceData();
 });
+
+TextEditingController searchValue = TextEditingController();

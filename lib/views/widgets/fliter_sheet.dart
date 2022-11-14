@@ -22,15 +22,21 @@ class FilterCustomModelSheet {
               children: [
                 StickyHeader(
                   overlapHeaders: true,
-                  header: ListTile(
-                    title: const Text('Filter'),
-                    trailing: InkWell(
-                      onTap: () => Navigator.pop(context),
-                      child: const Icon(Icons.close),
+                  header: Padding(
+                    padding: const EdgeInsets.only(bottom: 0.0),
+                    child: ListTile(
+                      title: const Text('Filter'),
+                      trailing: InkWell(
+                        onTap: () => Navigator.pop(context),
+                        child: const Icon(Icons.close),
+                      ),
                     ),
                   ),
                   content: Column(
                     children: [
+                      const SizedBox(
+                        height: 50,
+                      ),
                       ExpansionTile(
                         title: const Text('Continent'),
                         children: [
