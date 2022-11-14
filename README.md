@@ -9,37 +9,41 @@ The app uses light and dark mode.
 
 
 ### Tech Stack
-Technology Flutter, Dart
+ Flutter, Dart
 
-### Libraries
+### Libraries and Packages
 
-  font_awesome_flutter: i used for social media icons, as its is predefine in it.
+  http: Is used to for the network request.
+  flutter_riverpod: Is used it for state management.
+  flutter_screenutil: Is used for responsivness of the app.
+  sticky_headers: Is used to make my filter sheet header to stick to the screen and not scroll with the rest of the content.
+  carousel_slider: Is used it to make the make the flag and the coat of the arm in the detailed page scrollable.
 
-  google_fonts: It helped me to use google fonts in an easy way.
-
-  video_player: It's used for playing video clips in flutter, I didn't used it again. I wanted to add some of the ui i have work with but time was against me.
 
 
-### Design Description
-The design is only on portrait mode, 
+
+### Design Description. 
+The app is responsive
+It adapts to the system theme mode.
 On lunching the app, the home screen is dispalyed.
+On clicking on any of the country it takes to you to detailed screen.
 
 ### Feature would like to add ...
-I would have love to implement the dark and light mode and also the localization.
-Work on the splash screen. 
-Add the navigation drawer, 
-Add a link where one can easily download my cv.
-Add video files to my existing ui's.
+I would have love to implement the localization.
+I would also love to implement the filter and search .
 
 
-Link to APK file
-Click to download from [_drive_](https://drive.google.com/file/d/1F8o1q3B1Ukwlx_P0F11WaJqvR2xC0xoD/view?usp=share_link "gogle drive")
-### Link to appetize
+
+### Links to The Apk
+##### Link to APK file
+Click to download from [_drive_](https://drive.google.com/file/d/1IZ1BOQpnr5QbqiEi0EuSaHdWvFXS1082/view?usp=share_link "gogle drive")
+##### Link to appetize
 click on the link below to view the app on appetize
-[_appetize_](https://bit.ly/3A9ZxDx "appetize")
+[_appetize_](http://bit.ly/3TOTEmd "appetize")
 ### Challenges
- *My major Challenges was that my hard disk broke down on Thursday night, I had to buy another, I was able to fix it on Staruday moring. 
- *Coming up with what to submit under 10hrs is one of the biggest ride i have embark on.
+ * Turning the json that is coming from the network requst was the challenges I faced.
+ * Getting the data that is coming from the api to work without throwing a null and type error was hell. 
+ * I'm still trying to add the search and filter functionaility. 
 
 The other boss challenge is juggling the tasks with other commitments (❁´◡`❁).
 
