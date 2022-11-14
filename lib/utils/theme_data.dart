@@ -155,6 +155,8 @@ ThemeData darkThemeData = ThemeData(
       ),
     ),
   ),
+  bottomSheetTheme:
+      BottomSheetThemeData(backgroundColor: AppColor.darkModeScreenColor),
   appBarTheme: AppBarTheme(
     backgroundColor: AppColor.darkModeScreenColor,
     elevation: 0,
