@@ -36,10 +36,10 @@ I would also love to implement the filter and search .
 
 ### Links to The Apk
 ##### Link to APK file
-Click to download from [_drive_](https://drive.google.com/file/d/1IZ1BOQpnr5QbqiEi0EuSaHdWvFXS1082/view?usp=share_link "gogle drive")
+Click to download from 
 ##### Link to appetize
 click on the link below to view the app on appetize
-[_appetize_](http://bit.ly/3TOTEmd "appetize")
+[_appetize_](https://appetize.io/app/nms7zehdrjf5nbelo2ol5lu3d4?device=pixel4&osVersion=12.0&scale=60 "appetize")
 ### Challenges
  * Turning the json that is coming from the network requst was the challenges I faced.
  * Getting the data that is coming from the api to work without throwing a null and type error was hell. 
