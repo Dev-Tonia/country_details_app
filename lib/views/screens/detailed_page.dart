@@ -63,26 +63,6 @@ class DetailedPage extends StatelessWidget {
                 );
               }).toList(),
             ),
-            // Container(
-            //     width: MediaQuery.of(context).size.width,
-            //     margin: EdgeInsets.symmetric(horizontal: 5.0),
-            //     decoration: BoxDecoration(color: Colors.amber),
-            //     child: Text(
-            //       'text $i',
-            //       style: TextStyle(fontSize: 16.0),
-            //     )),
-            // Container(
-            //   height: 200,
-            //   width: double.infinity,
-            //   decoration:
-            //       BoxDecoration(borderRadius: BorderRadius.circular(8.0)),
-            //   child: ClipRRect(
-            //     borderRadius: BorderRadius.circular(8.0),
-            //     child: Image.network(
-            //       detailData.flags!.png.toString(),
-            //     ),
-            //   ),
-            // ),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
@@ -105,12 +85,14 @@ class DetailedPage extends StatelessWidget {
                           DetailedText(
                             textTheme: textTheme,
                             leadingText: 'Capital:  ',
-                            subText: detailData.capital![0],
+                            subText: detailData.capital!.isEmpty
+                                ? ''
+                                : detailData.capital![0].toString(),
                           ),
                           DetailedText(
                             textTheme: textTheme,
                             leadingText: 'Motto:  ',
-                            subText: detailData.population.toString(),
+                            subText: 'Not provided in database',
                           ),
                         ],
                       ),
@@ -127,12 +109,12 @@ class DetailedPage extends StatelessWidget {
                           DetailedText(
                             textTheme: textTheme,
                             leadingText: 'Ethic group:  ',
-                            subText: detailData.languages!.eng.toString(),
+                            subText: 'Not provided in database',
                           ),
                           DetailedText(
                             textTheme: textTheme,
                             leadingText: 'Government:  ',
-                            subText: detailData.population.toString(),
+                            subText: 'Not provided in database',
                           ),
                         ],
                       ),
@@ -160,7 +142,7 @@ class DetailedPage extends StatelessWidget {
                             textTheme: textTheme,
                             leadingText: 'GDP:  ',
                             subText: detailData.gini!.d2014 == null
-                                ? ''
+                                ? 'Not provided in database'
                                 : detailData.gini!.d2014.toString(),
                           ),
                         ],
@@ -178,7 +160,7 @@ class DetailedPage extends StatelessWidget {
                           DetailedText(
                             textTheme: textTheme,
                             leadingText: 'Date format:  ',
-                            subText: detailData.region.toString(),
+                            subText: 'dd/mm/yyyy',
                           ),
                           DetailedText(
                             textTheme: textTheme,

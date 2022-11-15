@@ -2,20 +2,26 @@ import 'package:country_details/utils/theme_data.dart';
 import 'package:country_details/views/view_model/data_provider.dart';
 import 'package:country_details/views/widgets/fliter_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../utils/app_colors.dart';
 import 'lang_model_sheet.dart';
 
-class CustomBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomBar({
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomAppBar({
     Key? key,
+    required this.controller,
+    required this.ref,
     required this.textTheme,
     required this.theme,
   }) : super(key: key);
 
+  final TextEditingController controller;
+  final WidgetRef ref;
   final TextTheme textTheme;
   final ThemeData theme;
+
   @override
   Size get preferredSize => const Size.fromHeight(190);
 
@@ -53,7 +59,10 @@ class CustomBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             TextFormField(
               textAlign: TextAlign.center,
-              controller: searchValue,
+              controller: controller,
+              onFieldSubmitted: (value) {
+                ref.read(searchedCountryTextProvided.notifier).state = value;
+              },
               decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.search),
                 hintText: 'Search Country',
@@ -63,7 +72,6 @@ class CustomBar extends StatelessWidget implements PreferredSizeWidget {
                 focusColor: theme.focusColor,
                 border: InputBorder.none,
               ),
-              // validation done in the helper class, you can do more validation there and pass the value on the UI
             ),
             const SizedBox(
               height: 16,

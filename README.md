@@ -50,10 +50,10 @@ The other boss challenge is juggling the tasks with other commitments (❁´◡`
 Run Locally
 Clone the project
 
-  _git clone-_ (https://github.com/Dev-Tonia/resume.git)
+  _git clone-_ (https://github.com/Dev-Tonia/country_details_app.git)
 Go to the project directory
 
-  `cd resume`
+  `cd country_details_app`
 Install dependencies
 
   `flutter pub get`

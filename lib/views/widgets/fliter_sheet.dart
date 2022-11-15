@@ -1,8 +1,7 @@
 import 'package:country_details/views/widgets/filter_text_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:accordion/accordion.dart';
-import 'package:accordion/controllers.dart';
+
 import 'package:sticky_headers/sticky_headers/widget.dart';
 
 class FilterCustomModelSheet {
